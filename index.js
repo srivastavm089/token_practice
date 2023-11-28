@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
       secure: true,
       sameSite: "None",
        domain:".token-7w1e.onrender.com",
-       expires:new Date(Date.now+100000)
+       maxAge:new Date(Date.now() + 60000)
     })
     .json({ message: "write success" });
 });

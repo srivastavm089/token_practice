@@ -6,15 +6,17 @@ const app = express();
 app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(cookieParser());
 app.get("/", (req, res) => {
+  const expirationDate = new Date(Date.now() + 60000);
   res
     .status(200)
     .cookie("token", "de3ifbhcvewij", {
       httpOnly: true,
-      path:'/',
+
       secure: true,
       sameSite: "None",
-       domain:".token-7w1e.onrender.com",
-       maxAge:new Date(Date.now() + 604800000)
+      domain: ".token-7w1e.onrender.com",
+      expires: expirationDate,
+      path: "/",
     })
     .json({ message: "write success" });
 });

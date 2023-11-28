@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "None",
-       domain:".token-7w1e.onrender"
+       domain:".token-7w1e.onrender.com"
     })
     .json({ message: "write success" });
 });

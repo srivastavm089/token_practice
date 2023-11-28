@@ -10,6 +10,7 @@ app.get("/", (req, res) => {
     .status(200)
     .cookie("token", "de3ifbhcvewij", {
       httpOnly: true,
+      path:'/',
       secure: true,
       sameSite: "None",
        domain:".token-7w1e.onrender.com",

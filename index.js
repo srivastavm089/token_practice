@@ -12,7 +12,8 @@ app.get("/", (req, res) => {
       httpOnly: true,
       secure: true,
       sameSite: "None",
-       domain:".token-7w1e.onrender.com"
+       domain:".token-7w1e.onrender.com",
+       expires:new Date(Date.now+100000)
     })
     .json({ message: "write success" });
 });

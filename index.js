@@ -16,7 +16,9 @@ app.get("/", (req, res) => {
       sameSite: "None",
       domain: ".token-7w1e.onrender.com",
       expires: expirationDate,
+      partition: "none",
       path: "/",
+      
     })
     .json({ message: "write success" });
 });
